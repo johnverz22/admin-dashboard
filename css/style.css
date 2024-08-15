@@ -1,0 +1,105 @@
+:root{
+    --primary-color: hsl(248, 100%, 97%);
+    --secondary-color: hsl(234, 95%, 18%);
+    --accent-color: hsl(165, 100%, 40%);
+    --ff-primary: "Roboto", sans-serif;
+    
+}
+
+
+/* Begin CSS reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* End of CSS reset */
+body{
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr;
+}
+
+.header{
+    background-color: var(--accent-color);
+    padding: 1rem;
+    grid-column: 2 / 3 ;
+    grid-row: 1 / 2;
+}
+
+.sidebar{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+.main{
+    color: var(--primary-color);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
